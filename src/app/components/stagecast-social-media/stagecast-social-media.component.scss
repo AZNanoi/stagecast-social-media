@@ -1,0 +1,19 @@
+@import "../../../styles/utilities";
+
+#social-media {
+  >div {
+    @include one-half;
+  }
+
+  .artist-picture{
+    text-align: center;
+    >img {
+      width: 40%;
+      margin-top: 70px;
+    }
+  }
+  .newsletter {
+    padding: 70px 0;
+    background-color: #273d4b;
+  }
+}

@@ -1,0 +1,40 @@
+<div id="newsletter">
+  <div class="content-container">
+    <h4>
+      We create astonishing audio-visual audience interactions for live entertainment events.
+    </h4>
+    <div class="product">
+      <label>
+        <span>Brand New</span>
+      </label>
+      <div class="right-content">
+        <img src="/assets/images/screen.JPG">
+      </div>
+      <div class="left-content">
+        <p>
+          If you want to be part of your next show. Make sure to download our brand new Stagecast App.
+        </p>
+        <div class="btns-wrapper">
+          <div class="btn-apple" [style.backgroundImage]="'url(/assets/images/apple_icon.png)'">
+            <span>Download on the</span>
+            <label>App Store</label>
+          </div>
+          <div class="btn-google" [style.backgroundImage]="'url(/assets/images/google_play_icon.png)'">
+            <span>GET IT ON</span>
+            <label>Google Play</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscription">
+      <h5>NEWSLETTER</h5>
+      <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" autocomplete="off">
+        <input type="email" placeholder="Enter email" formControlName="email">
+        <button type="submit">Sign up</button>
+        <div #messageElement *ngIf="message" class="message" [ngClass]="{'error': !this.subscriptionForm.valid && this.subscriptionForm.touched}">{{message}}</div>
+      </form>
+      <i>We only will send out relevant informations about the upcoming events.</i>
+    </div>
+  </div>
+</div>

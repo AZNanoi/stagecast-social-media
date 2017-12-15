@@ -1,0 +1,192 @@
+@import "../../../../styles/utilities";
+
+#newsletter {
+  color: white;
+  .content-container {
+    @include container-size(70%);
+
+    >h4 {
+      font-size: $font-size-h4;
+      font-weight: 300;
+      font-family: $font-family-regular;
+      margin-top: 0;
+    }
+
+    .product {
+      @include flex-layout(row, 50%);
+      background-color: $bg-color-default;
+      padding: 50px 30px;
+      position: relative;
+
+      >label {
+        @include circle(80px);
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+        background-color: #e91857;
+        color: white;
+        transform: rotate(-15deg);
+        left: 0;
+        margin-left: -40px;
+        top: 20px;
+        span{
+          @include center-content(50%, 50%);
+          font-weight: 600;
+          font-size: $font-size-h5;
+        }
+      }
+
+      >div{
+        padding: 0 20px;
+      }
+
+      .right-content {
+        img{
+          border-radius: 25px;
+          box-shadow: 0 0 25px #151515;
+          width: 100%;
+        }
+      }
+      .left-content {
+        position: relative;
+        >p{
+          margin-top: 0;
+        }
+        .btns-wrapper {
+          width: 150px;
+          bottom: 5px;
+          position: absolute;
+          >div {
+            margin-top: 10px;
+          }
+          .btn-apple {
+            background-repeat: no-repeat;
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px 0 10px 50px;
+            background-position: 5px;
+            background-size: 40px;
+            span {
+              font-size: 0.75em;
+              color: gray;
+              line-height: 1;
+              font-weight: 600;
+              display: block;
+            }
+            label {
+              font-size: 1.15em;
+              line-height: 1;
+              font-family: $font-family-title;
+              margin-left: 2px;
+            }
+          }
+          .btn-google {
+            background-repeat: no-repeat;
+            background-color: black;
+            border-radius: 10px;
+            padding: 10px 0 10px 40px;
+            background-position: 10px 15px;
+            background-size: 25px;
+            span {
+              font-size: 0.7em;
+              color: gray;
+              line-height: 1;
+              font-weight: 600;
+              display: block;
+            }
+            label {
+              font-size: 1.1em;
+              line-height: 1;
+              font-family: $font-family-title;
+            }
+          }
+        }
+      }
+    }
+
+    .subscription {
+      margin-top: 50px;
+      h5{
+        margin: 5px 0;
+      }
+      form {
+        position: relative;
+        input{
+          height: 50px;
+          background-color: #3f5563;
+          float: left;
+          width: 80%;
+          border: 0;
+          padding-left: 20px;
+          color: #8194a3;
+          font-size: $font-size-h5;
+        }
+        button{
+          height: 50px;
+          background-color: #eb1e57;
+          width: 20%;
+          border: 0;
+          color: white;
+        }
+        .message {
+          background-color: #d1e9cf;
+          color: black;
+          padding: 12px 10px;
+          position: absolute;
+          width: 100%;
+        }
+        .error {
+          background-color: red;
+        }
+      }
+      i{
+        margin-top: 15px;
+        display: block;
+        width: 60%;
+        font-size: 0.9em;
+        color: #acacac;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@include media-breakpoint-only(xs) {
+
+}
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-only(sm) {
+
+}
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-only(md) {
+  #newsletter {
+    .content-container {
+      .product{
+        .right-content{
+          img{
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-only(lg) {
+  #newsletter {
+    .content-container {
+      .product{
+        .right-content{
+          img{
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-only(xl) {
+
+}

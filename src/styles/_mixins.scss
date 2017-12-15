@@ -1,0 +1,34 @@
+@mixin center-content($top, $left) {
+  margin: 0;
+  position: absolute;
+  top: $top;
+  left:$left;
+  transform: translate(-#{$left}, -#{$top});
+}
+
+@mixin container-size($size) {
+  width: $size;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin one-half() {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+
+@mixin flex-layout($direction, $boxSize) {
+  display: flex;
+  flex-direction: $direction;
+
+  >div {
+    width: $boxSize;
+  }
+}
+
+@mixin circle($size){
+  width: $size;
+  height: $size;
+  border-radius:$size / 2;
+}

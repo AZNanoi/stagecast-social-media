@@ -1,0 +1,6 @@
+@import "../../../styles/utilities";
+
+#home {
+  @include container-size(45%);
+  margin-bottom: 100px;
+}

@@ -1,0 +1,60 @@
+@import "../../../styles/utilities";
+
+.facebook-post {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+
+  .user{
+    >div{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .profile-img {
+      width: 70px;
+      height: 70px;
+      background-position: center;
+      background-size: cover;
+      border-radius: 2px;
+    }
+    h4{
+      font-size: $font-size-h4;
+      color: blue;
+      font-weight: 800;
+      display: inline-block;
+      margin: 0 0 0 10px;
+    }
+  }
+  .message {
+    padding: 20px 0;
+  }
+  .img-wrapper{
+    text-align: center;
+    position: relative;
+    height: 300px;
+    img{
+      height: 100%;
+    }
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+    li{
+      margin-right: 10px;
+      display: inline;
+    }
+  }
+  .icons {
+    color: gray;
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+    >div{
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}

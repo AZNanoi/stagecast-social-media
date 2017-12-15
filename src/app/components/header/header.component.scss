@@ -1,0 +1,12 @@
+@import "../../../styles/utilities";
+
+#header {
+  background-color: $bg-color-secondary;
+  text-align: center;
+  padding: 15px 0;
+  a{
+    img {
+      width: 150px;
+    }
+  }
+}
